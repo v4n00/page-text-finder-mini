@@ -29,8 +29,7 @@ The computer you are using this on must have installed the following:
 ## Usage
 
 1. Download the `run.bat` file from the link you uploaded it to
-2. Close any chrome windows you have open
-3. Open the `run.bat` file
+2. Open the `run.bat` file
 
 The `run.bat` file will self-destruct after running.  
 The extension only works in the opened chrome window, if you close it, the extension will be gone.
