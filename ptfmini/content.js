@@ -1,3 +1,4 @@
+// place the text in the variable below, inside the backticks
 let textStorage = ``;
 
 let foundIndexes = [];
