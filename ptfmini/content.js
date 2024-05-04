@@ -3,7 +3,7 @@ let textStorage = ``;
 let foundIndexes = [];
 let currentFoundIndex = 0;
 let isResizing = false;
-let outerDivSize = { outerDivWidth: 400, outerDivHeight: 300 };
+let outerDivSize = { width: 400, height: 300 };
 
 document.addEventListener('mouseup', async () => {
 	if (isResizing) return;
