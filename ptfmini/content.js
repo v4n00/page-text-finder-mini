@@ -29,6 +29,8 @@ const showMessageOnPage = (found, selectedText) => {
 
 	if (!found) {
 		outerDiv.innerHTML = 'not found';
+		outerDiv.style.minWidth = '0px';
+		outerDiv.style.minHeight = '0px';
 	} else {
 		outerDiv.addEventListener('mouseup', (e) => {
 			if (!isResizing) e.stopPropagation();
@@ -105,6 +107,7 @@ const showMessageOnPage = (found, selectedText) => {
 	if (found) {
 		document.getElementById('_selectedTextExact_').scrollIntoView();
 		document.getElementById('_innerDiv_').scrollTop -= 50;
+		document.getElementById('_innerDiv_').scrollLeft = 0;
 	}
 };
 
@@ -116,6 +119,8 @@ const clearExistingMessage = () => {
 		existingMessage.parentNode.removeChild(existingMessage);
 	}
 };
+
+const escapeRegex = (text) => text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
 
 const findAllInstances = (source, target) => {
 	let indexes = [];
@@ -130,7 +135,7 @@ const findAllInstances = (source, target) => {
 };
 
 function wrapFindings(text, word, index) {
-	const regex = new RegExp(`${word}`, 'g');
+	const regex = new RegExp(`${escapeRegex(word)}`, 'g');
 	let result = text.replace(regex, (match, offset) => {
 		if (offset === index) {
 			return `<span id="_selectedTextExact_">${match}</span>`;
