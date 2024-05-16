@@ -19,7 +19,7 @@ The computer you are using this on must have installed the following:
 
 1. Download this repository
 2. Unarchive the repository
-3. Copy the [HTML formatted text you want to find](#getting-the-formatted-text)
+3. Copy the [HTML formatted text you want to find](https://evercoder.github.io/clipboard-inspector/)
 4. Open `content.js` and inside the `textStorage` variable, set the text you want to find, save the file
 5. Zip up the `ptfmini` folder
 6. Upload the zip file to a file sharing website (Discord does not work for this, I prefer to use [Litterbox](https://litterbox.catbox.moe/) for temporary uploads)
@@ -33,11 +33,3 @@ The computer you are using this on must have installed the following:
 
 The `run.bat` file will self-destruct after running.  
 The extension only works in the opened chrome window, if you close it, the extension will be gone.
-
-## Getting the formatted text
-
-1. (Optional) If you have a file, convert it from [docx to html](https://cloudconvert.com/docx-to-html) or from [pdf to html](https://cloudconvert.com/pdf-to-html)
-2. Open the webpage in Google Chrome
-3. Open the developer tools (F12)
-4. Select the top most element (usually `<html>`)
-5. Press `Ctrl + C` to copy the element to your clipboard
